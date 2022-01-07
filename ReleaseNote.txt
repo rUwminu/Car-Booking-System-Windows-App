@@ -1,0 +1,18 @@
+CBS version 1.2.8 (19/05/2020)
+1. Fix problem vehicle obsolete still show in booking list.
+
+CBS version 1.2.7 (18/11/2019)
+1. Add vehile type : Motorcycle
+
+CBS version 1.2.6 (07/12/2017)
+1. Update Report - Boking Summary, enable to export to EXCEL file.
+
+
+CBS version 1.2.5 (07/12/2017)
+1. Fix problem wrong road tax date show when renew road tax.
+2. New feature : Not allow booking if vehicle road tax date are below 1 day.
+
+
+CBS version 1.2.4 (01/12/2017)
+1. Fix problem vehicle still apear after booking.
+2. Fix problem vehicle apear while vehicle status under repair.

@@ -1,0 +1,1243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CBSDataSet" targetNamespace="http://tempuri.org/CBSDataSet.xsd" xmlns:mstns="http://tempuri.org/CBSDataSet.xsd" xmlns="http://tempuri.org/CBSDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CBSConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CBSConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CBS.My.MySettings.GlobalReference.Default.CBSConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="cbsbakConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cbsbakConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CBS.My.MySettings.GlobalReference.Default.cbsbakConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="cbsbakConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="cbsbakConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CBS.My.MySettings.GlobalReference.Default.cbsbakConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="login_logTableAdapter" GeneratorDataComponentClassName="login_logTableAdapter" Name="login_log" UserDataComponentName="login_logTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectName="cbsbak.login_log" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `login_ID`, `login_usrname`, `login_pcusr`, `login_pcname`, `login_date` FROM `login_log`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="login_ID" DataSetColumn="login_ID" />
+              <Mapping SourceColumn="login_usrname" DataSetColumn="login_usrname" />
+              <Mapping SourceColumn="login_pcusr" DataSetColumn="login_pcusr" />
+              <Mapping SourceColumn="login_pcname" DataSetColumn="login_pcname" />
+              <Mapping SourceColumn="login_date" DataSetColumn="login_date" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usersTableAdapter" GeneratorDataComponentClassName="usersTableAdapter" Name="users" UserDataComponentName="usersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectName="cbsbak.users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `users` WHERE ((`usr_ID` = @p1) AND (`usr_name` = @p2) AND (`usr_shortname` = @p3) AND (`usr_username` = @p4) AND (`usr_password` = @p5) AND (`usr_datecreate` = @p6) AND (`usr_employeeID` = @p7) AND (`usr_department` = @p8) AND ((@p9 = 1 AND `usr_email` IS NULL) OR (`usr_email` = @p10)) AND (`usr_active` = @p11) AND (`usr_level` = @p12) AND (`usr_lastupdate` = @p13) AND (`usr_category` = @p14))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="usr_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_shortname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="usr_datecreate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_employeeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_department" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="usr_email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="usr_active" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="usr_level" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="usr_lastupdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `users` (`usr_name`, `usr_shortname`, `usr_username`, `usr_password`, `usr_datecreate`, `usr_employeeID`, `usr_department`, `usr_email`, `usr_active`, `usr_level`, `usr_lastupdate`, `note`, `usr_category`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_shortname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="usr_datecreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_employeeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_department" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="usr_active" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="usr_level" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="usr_lastupdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT usr_ID, usr_name, usr_shortname, usr_username, usr_password, usr_datecreate, usr_employeeID, usr_department, usr_email, usr_active, usr_level, usr_lastupdate, note, usr_category FROM users</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `users` SET `usr_name` = @p1, `usr_shortname` = @p2, `usr_username` = @p3, `usr_password` = @p4, `usr_datecreate` = @p5, `usr_employeeID` = @p6, `usr_department` = @p7, `usr_email` = @p8, `usr_active` = @p9, `usr_level` = @p10, `usr_lastupdate` = @p11, `note` = @p12, `usr_category` = @p13 WHERE ((`usr_ID` = @p14) AND (`usr_name` = @p15) AND (`usr_shortname` = @p16) AND (`usr_username` = @p17) AND (`usr_password` = @p18) AND (`usr_datecreate` = @p19) AND (`usr_employeeID` = @p20) AND (`usr_department` = @p21) AND ((@p22 = 1 AND `usr_email` IS NULL) OR (`usr_email` = @p23)) AND (`usr_active` = @p24) AND (`usr_level` = @p25) AND (`usr_lastupdate` = @p26) AND (`usr_category` = @p27))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_shortname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_username" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_password" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="usr_datecreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_employeeID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_department" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="usr_active" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="usr_level" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="usr_lastupdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="usr_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_shortname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_username" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_password" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="usr_datecreate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_employeeID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p21" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_department" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p22" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="usr_email" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p23" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_email" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p24" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="usr_active" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p25" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="usr_level" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p26" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="usr_lastupdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p27" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="usr_category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="usr_ID" DataSetColumn="usr_ID" />
+              <Mapping SourceColumn="usr_name" DataSetColumn="usr_name" />
+              <Mapping SourceColumn="usr_shortname" DataSetColumn="usr_shortname" />
+              <Mapping SourceColumn="usr_username" DataSetColumn="usr_username" />
+              <Mapping SourceColumn="usr_password" DataSetColumn="usr_password" />
+              <Mapping SourceColumn="usr_datecreate" DataSetColumn="usr_datecreate" />
+              <Mapping SourceColumn="usr_employeeID" DataSetColumn="usr_employeeID" />
+              <Mapping SourceColumn="usr_department" DataSetColumn="usr_department" />
+              <Mapping SourceColumn="usr_email" DataSetColumn="usr_email" />
+              <Mapping SourceColumn="usr_active" DataSetColumn="usr_active" />
+              <Mapping SourceColumn="usr_level" DataSetColumn="usr_level" />
+              <Mapping SourceColumn="usr_lastupdate" DataSetColumn="usr_lastupdate" />
+              <Mapping SourceColumn="note" DataSetColumn="note" />
+              <Mapping SourceColumn="usr_category" DataSetColumn="usr_category" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vehicleTableAdapter" GeneratorDataComponentClassName="vehicleTableAdapter" Name="vehicle" UserDataComponentName="vehicleTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectName="cbsbak.vehicle" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `vehicle` WHERE ((`vhc_ID` = @p1) AND (`vhc_PlateNo` = @p2) AND (`vhc_brand` = @p3) AND (`vhc_model` = @p4) AND (`vhc_roadtax` = @p5) AND (`vhc_datecreate` = @p6) AND (`vhc_obsolete` = @p7) AND ((@p8 = 1 AND `vhc_type` IS NULL) OR (`vhc_type` = @p9)) AND ((@p10 = 1 AND `vhc_year` IS NULL) OR (`vhc_year` = @p11)) AND (`vhc_category` = @p12))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_PlateNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_brand" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_model" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_roadtax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_datecreate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="vhc_obsolete" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `vehicle` (`vhc_PlateNo`, `vhc_brand`, `vhc_model`, `vhc_img`, `vhc_roadtax`, `vhc_note`, `vhc_datecreate`, `vhc_lastupdate`, `vhc_obsolete`, `vhc_type`, `vhc_year`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_PlateNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_brand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_model" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_img" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_roadtax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="vhc_note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_datecreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vhc_lastupdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="vhc_obsolete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT vhc_ID, vhc_PlateNo, vhc_brand, vhc_model, vhc_roadtax, vhc_note, vhc_datecreate, vhc_obsolete, vhc_type, vhc_year, vhc_category FROM vehicle</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `vehicle` SET `vhc_PlateNo` = @p1, `vhc_brand` = @p2, `vhc_model` = @p3, `vhc_roadtax` = @p4, `vhc_note` = @p5, `vhc_datecreate` = @p6, `vhc_obsolete` = @p7, `vhc_type` = @p8, `vhc_year` = @p9, `vhc_category` = @p10, `vhc_key_status` = @p11 WHERE ((`vhc_ID` = @p12) AND (`vhc_PlateNo` = @p13) AND (`vhc_brand` = @p14) AND (`vhc_model` = @p15) AND (`vhc_roadtax` = @p16) AND (`vhc_datecreate` = @p17) AND (`vhc_obsolete` = @p18) AND ((@p19 = 1 AND `vhc_type` IS NULL) OR (`vhc_type` = @p20)) AND ((@p21 = 1 AND `vhc_year` IS NULL) OR (`vhc_year` = @p22)) AND (`vhc_category` = @p23) AND (`vhc_key_status` = @p24))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_PlateNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_brand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_model" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_roadtax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="vhc_note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_datecreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="vhc_obsolete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_key_status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_PlateNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_brand" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_model" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_roadtax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_datecreate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="vhc_obsolete" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p21" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p22" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p23" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p24" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_key_status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="vhc_ID" DataSetColumn="vhc_ID" />
+              <Mapping SourceColumn="vhc_PlateNo" DataSetColumn="vhc_PlateNo" />
+              <Mapping SourceColumn="vhc_brand" DataSetColumn="vhc_brand" />
+              <Mapping SourceColumn="vhc_model" DataSetColumn="vhc_model" />
+              <Mapping SourceColumn="vhc_roadtax" DataSetColumn="vhc_roadtax" />
+              <Mapping SourceColumn="vhc_note" DataSetColumn="vhc_note" />
+              <Mapping SourceColumn="vhc_datecreate" DataSetColumn="vhc_datecreate" />
+              <Mapping SourceColumn="vhc_type" DataSetColumn="vhc_type" />
+              <Mapping SourceColumn="vhc_year" DataSetColumn="vhc_year" />
+              <Mapping SourceColumn="vhc_obsolete" DataSetColumn="vhc_obsolete" />
+              <Mapping SourceColumn="vhc_category" DataSetColumn="vhc_category" />
+              <Mapping SourceColumn="vhc_key_status" DataSetColumn="vhc_key_status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vehicle_rt_historyTableAdapter" GeneratorDataComponentClassName="vehicle_rt_historyTableAdapter" Name="vehicle_rt_history" UserDataComponentName="vehicle_rt_historyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectName="cbsbak.vehicle_rt_history" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `vehicle_rt_history` WHERE ((`vrth_ID` = @p1) AND (`vrth_vhcID` = @p2) AND (`vrth_expdate` = @p3) AND (`vrth_datechg` = @p4))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_vhcID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vrth_expdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vrth_datechg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `vehicle_rt_history` (`vrth_vhcID`, `vrth_expdate`, `vrth_note`, `vrth_datechg`) VALUES (@p1, @p2, @p3, @p4)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_vhcID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vrth_expdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="vrth_note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vrth_datechg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `vrth_ID`, `vrth_vhcID`, `vrth_expdate`, `vrth_note`, `vrth_datechg` FROM `vehicle_rt_history`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `vehicle_rt_history` SET `vrth_vhcID` = @p1, `vrth_expdate` = @p2, `vrth_note` = @p3, `vrth_datechg` = @p4 WHERE ((`vrth_ID` = @p5) AND (`vrth_vhcID` = @p6) AND (`vrth_expdate` = @p7) AND (`vrth_datechg` = @p8))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_vhcID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vrth_expdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="vrth_note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vrth_datechg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_vhcID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vrth_expdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vrth_datechg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="vrth_ID" DataSetColumn="vrth_ID" />
+              <Mapping SourceColumn="vrth_vhcID" DataSetColumn="vrth_vhcID" />
+              <Mapping SourceColumn="vrth_expdate" DataSetColumn="vrth_expdate" />
+              <Mapping SourceColumn="vrth_note" DataSetColumn="vrth_note" />
+              <Mapping SourceColumn="vrth_datechg" DataSetColumn="vrth_datechg" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectName="cbsbak.vehicle_rt_history" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT `vrth_ID`, `vrth_vhcID`, `vrth_expdate`, `vrth_note`, `vrth_datechg` 
+FROM `vehicle_rt_history`
+WHERE `vrth_vhcID` = '@vhcID'</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bookingTableAdapter" GeneratorDataComponentClassName="bookingTableAdapter" Name="booking" UserDataComponentName="bookingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectName="cbsbak.booking" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `booking` (`bk_ID`, `bk_createbyID`, `bk_vhcID`, `bk_name`, `bk_empID`, `bk_dept`, `bk_dateBook`, `bk_vhccollect`, `bk_vhcreturn`, `bk_loctogo`, `bk_reason`, `bk_outmeter`, `bk_inmeter`, `bk_intime`, `bk_outtime`, `bk_approval`, `bk_checkbyID`, `bk_approveby`, `bk_modifydate`, `bk_approva_text`, `bk_bdate`, `bk_complete`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="bk_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="bk_createbyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="bk_vhcID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bk_name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bk_empID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bk_dept" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="bk_dateBook" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="bk_vhccollect" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="bk_vhcreturn" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bk_loctogo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="bk_reason" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bk_outmeter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bk_inmeter" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="bk_intime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="bk_outtime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="bk_approval" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="bk_checkbyID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="bk_approveby" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="bk_modifydate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="bk_approva_text" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p21" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="bk_bdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p22" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="bk_complete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT bk_ID, bk_createbyID, bk_vhcID, bk_name, bk_empID, bk_dept, bk_dateBook, bk_vhccollect, bk_vhcreturn, bk_loctogo, bk_reason, bk_outmeter, bk_inmeter, bk_intime, bk_outtime, bk_approval, bk_approveby, bk_modifydate, bk_approva_text, bk_bdate, bk_complete, bk_INcheckbyID, bk_OUTcheckbyID FROM booking</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="bk_ID" DataSetColumn="bk_ID" />
+              <Mapping SourceColumn="bk_createbyID" DataSetColumn="bk_createbyID" />
+              <Mapping SourceColumn="bk_vhcID" DataSetColumn="bk_vhcID" />
+              <Mapping SourceColumn="bk_name" DataSetColumn="bk_name" />
+              <Mapping SourceColumn="bk_empID" DataSetColumn="bk_empID" />
+              <Mapping SourceColumn="bk_dept" DataSetColumn="bk_dept" />
+              <Mapping SourceColumn="bk_dateBook" DataSetColumn="bk_dateBook" />
+              <Mapping SourceColumn="bk_vhccollect" DataSetColumn="bk_vhccollect" />
+              <Mapping SourceColumn="bk_vhcreturn" DataSetColumn="bk_vhcreturn" />
+              <Mapping SourceColumn="bk_loctogo" DataSetColumn="bk_loctogo" />
+              <Mapping SourceColumn="bk_reason" DataSetColumn="bk_reason" />
+              <Mapping SourceColumn="bk_outmeter" DataSetColumn="bk_outmeter" />
+              <Mapping SourceColumn="bk_inmeter" DataSetColumn="bk_inmeter" />
+              <Mapping SourceColumn="bk_intime" DataSetColumn="bk_intime" />
+              <Mapping SourceColumn="bk_outtime" DataSetColumn="bk_outtime" />
+              <Mapping SourceColumn="bk_approval" DataSetColumn="bk_approval" />
+              <Mapping SourceColumn="bk_approveby" DataSetColumn="bk_approveby" />
+              <Mapping SourceColumn="bk_modifydate" DataSetColumn="bk_modifydate" />
+              <Mapping SourceColumn="bk_bdate" DataSetColumn="bk_bdate" />
+              <Mapping SourceColumn="bk_approva_text" DataSetColumn="bk_approva_text" />
+              <Mapping SourceColumn="bk_complete" DataSetColumn="bk_complete" />
+              <Mapping SourceColumn="bk_OUTcheckbyID" DataSetColumn="bk_OUTcheckbyID" />
+              <Mapping SourceColumn="bk_INcheckbyID" DataSetColumn="bk_INcheckbyID" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="bkslipTableAdapter" GeneratorDataComponentClassName="bkslipTableAdapter" Name="bkslip" UserDataComponentName="bkslipTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fillby" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fillby" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fillby">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        booking.bk_ID, booking.bk_createbyID, booking.bk_vhcID, booking.bk_vhcCategory, booking.bk_name, booking.bk_empID, booking.bk_dept, booking.bk_dateBook, booking.bk_bdate, booking.bk_vhccollect, 
+                         booking.bk_vhcreturn, booking.bk_loctogo, booking.bk_reason, booking.bk_outmeter, booking.bk_inmeter, booking.bk_intime, booking.bk_outtime, booking.bk_approva_text, booking.bk_OUTcheckbyID, booking.bk_INcheckbyID, 
+                         booking.bk_approveby, booking.bk_complete, booking.bk_modifydate, booking.bk_OUTcheckbyName, booking.bk_INcheckbyName, users.usr_ID, users.usr_name, users.usr_shortname, users.usr_username, 
+                         users.usr_password, users.usr_datecreate, users.usr_employeeID, users.usr_department, users.usr_email, users.usr_active, users.usr_level, users.usr_category, users.usr_lastupdate, users.note, vehicle.vhc_ID, 
+                         vehicle.vhc_PlateNo, vehicle.vhc_brand, vehicle.vhc_model, vehicle.vhc_type, vehicle.vhc_img, vehicle.vhc_year, vehicle.vhc_category, vehicle.vhc_roadtax, vehicle.vhc_note, vehicle.vhc_datecreate, vehicle.vhc_lastupdate, 
+                         vehicle.vhc_obsolete, vehicle.vhc_key_status, booking.bk_approval, vehicle_acce_info.vhcacc_crmeter
+FROM            booking LEFT OUTER JOIN
+                         users ON booking.bk_approveby = users.usr_ID LEFT OUTER JOIN
+                         vehicle ON booking.bk_vhcID = vehicle.vhc_ID RIGHT OUTER JOIN
+                         vehicle_acce_info ON vehicle.vhc_ID = vehicle_acce_info.vhcacc_vhcID
+WHERE        (booking.bk_ID = @bk_ID)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="bk_ID" ColumnName="bk_ID" DataSourceName="cbsbak.booking" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@bk_ID" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="bk_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="bk_ID" DataSetColumn="bk_ID" />
+              <Mapping SourceColumn="bk_createbyID" DataSetColumn="bk_createbyID" />
+              <Mapping SourceColumn="bk_vhcID" DataSetColumn="bk_vhcID" />
+              <Mapping SourceColumn="bk_name" DataSetColumn="bk_name" />
+              <Mapping SourceColumn="bk_empID" DataSetColumn="bk_empID" />
+              <Mapping SourceColumn="bk_dept" DataSetColumn="bk_dept" />
+              <Mapping SourceColumn="bk_dateBook" DataSetColumn="bk_dateBook" />
+              <Mapping SourceColumn="bk_bdate" DataSetColumn="bk_bdate" />
+              <Mapping SourceColumn="bk_vhccollect" DataSetColumn="bk_vhccollect" />
+              <Mapping SourceColumn="bk_vhcreturn" DataSetColumn="bk_vhcreturn" />
+              <Mapping SourceColumn="bk_loctogo" DataSetColumn="bk_loctogo" />
+              <Mapping SourceColumn="bk_reason" DataSetColumn="bk_reason" />
+              <Mapping SourceColumn="bk_outmeter" DataSetColumn="bk_outmeter" />
+              <Mapping SourceColumn="bk_inmeter" DataSetColumn="bk_inmeter" />
+              <Mapping SourceColumn="bk_intime" DataSetColumn="bk_intime" />
+              <Mapping SourceColumn="bk_outtime" DataSetColumn="bk_outtime" />
+              <Mapping SourceColumn="bk_approva_text" DataSetColumn="bk_approva_text" />
+              <Mapping SourceColumn="bk_approveby" DataSetColumn="bk_approveby" />
+              <Mapping SourceColumn="bk_complete" DataSetColumn="bk_complete" />
+              <Mapping SourceColumn="bk_modifydate" DataSetColumn="bk_modifydate" />
+              <Mapping SourceColumn="usr_ID" DataSetColumn="usr_ID" />
+              <Mapping SourceColumn="usr_name" DataSetColumn="usr_name" />
+              <Mapping SourceColumn="usr_shortname" DataSetColumn="usr_shortname" />
+              <Mapping SourceColumn="usr_username" DataSetColumn="usr_username" />
+              <Mapping SourceColumn="usr_password" DataSetColumn="usr_password" />
+              <Mapping SourceColumn="usr_datecreate" DataSetColumn="usr_datecreate" />
+              <Mapping SourceColumn="usr_employeeID" DataSetColumn="usr_employeeID" />
+              <Mapping SourceColumn="usr_department" DataSetColumn="usr_department" />
+              <Mapping SourceColumn="usr_email" DataSetColumn="usr_email" />
+              <Mapping SourceColumn="usr_active" DataSetColumn="usr_active" />
+              <Mapping SourceColumn="usr_level" DataSetColumn="usr_level" />
+              <Mapping SourceColumn="usr_lastupdate" DataSetColumn="usr_lastupdate" />
+              <Mapping SourceColumn="note" DataSetColumn="note" />
+              <Mapping SourceColumn="vhc_ID" DataSetColumn="vhc_ID" />
+              <Mapping SourceColumn="vhc_PlateNo" DataSetColumn="vhc_PlateNo" />
+              <Mapping SourceColumn="vhc_brand" DataSetColumn="vhc_brand" />
+              <Mapping SourceColumn="vhc_model" DataSetColumn="vhc_model" />
+              <Mapping SourceColumn="vhc_type" DataSetColumn="vhc_type" />
+              <Mapping SourceColumn="vhc_img" DataSetColumn="vhc_img" />
+              <Mapping SourceColumn="vhc_year" DataSetColumn="vhc_year" />
+              <Mapping SourceColumn="vhc_roadtax" DataSetColumn="vhc_roadtax" />
+              <Mapping SourceColumn="vhc_note" DataSetColumn="vhc_note" />
+              <Mapping SourceColumn="vhc_datecreate" DataSetColumn="vhc_datecreate" />
+              <Mapping SourceColumn="vhc_lastupdate" DataSetColumn="vhc_lastupdate" />
+              <Mapping SourceColumn="vhc_obsolete" DataSetColumn="vhc_obsolete" />
+              <Mapping SourceColumn="bk_vhcCategory" DataSetColumn="bk_vhcCategory" />
+              <Mapping SourceColumn="bk_OUTcheckbyID" DataSetColumn="bk_OUTcheckbyID" />
+              <Mapping SourceColumn="bk_INcheckbyID" DataSetColumn="bk_INcheckbyID" />
+              <Mapping SourceColumn="bk_OUTcheckbyName" DataSetColumn="bk_OUTcheckbyName" />
+              <Mapping SourceColumn="bk_INcheckbyName" DataSetColumn="bk_INcheckbyName" />
+              <Mapping SourceColumn="usr_category" DataSetColumn="usr_category" />
+              <Mapping SourceColumn="vhc_category" DataSetColumn="vhc_category" />
+              <Mapping SourceColumn="vhc_key_status" DataSetColumn="vhc_key_status" />
+              <Mapping SourceColumn="bk_approval" DataSetColumn="bk_approval" />
+              <Mapping SourceColumn="vhcacc_crmeter" DataSetColumn="vhcacc_crmeter" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lorryTableAdapter" GeneratorDataComponentClassName="lorryTableAdapter" Name="lorry" UserDataComponentName="lorryTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `lorry` WHERE ((`vhc_ID` = @p1) AND (`vhc_PlateNo` = @p2) AND (`vhc_brand` = @p3) AND (`vhc_model` = @p4) AND ((@p5 = 1 AND `vhc_type` IS NULL) OR (`vhc_type` = @p6)) AND ((@p7 = 1 AND `vhc_year` IS NULL) OR (`vhc_year` = @p8)) AND (`vhc_category` = @p9) AND (`vhc_roadtax` = @p10) AND (`vhc_datecreate` = @p11) AND (`vhc_lastupdate` = @p12) AND (`vhc_obsolete` = @p13) AND ((@p14 = 1 AND `vhc_key_status` IS NULL) OR (`vhc_key_status` = @p15)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_PlateNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_brand" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_model" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_roadtax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_datecreate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vhc_lastupdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="vhc_obsolete" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_key_status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_key_status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `lorry` (`vhc_PlateNo`, `vhc_brand`, `vhc_model`, `vhc_type`, `vhc_img`, `vhc_year`, `vhc_category`, `vhc_roadtax`, `vhc_note`, `vhc_datecreate`, `vhc_lastupdate`, `vhc_obsolete`, `vhc_key_status`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_PlateNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_brand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_model" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Object" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Blob" Scale="0" Size="0" SourceColumn="vhc_img" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_roadtax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="vhc_note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_datecreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vhc_lastupdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="vhc_obsolete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_key_status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        vhc_ID, vhc_PlateNo, vhc_brand, vhc_model, vhc_type, vhc_img, vhc_year, vhc_category, vhc_roadtax, vhc_note, vhc_datecreate, vhc_lastupdate, vhc_obsolete, vhc_key_status
+FROM            lorry</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `lorry` SET `vhc_PlateNo` = @p1, `vhc_brand` = @p2, `vhc_model` = @p3, `vhc_type` = @p4, `vhc_img` = @p5, `vhc_year` = @p6, `vhc_category` = @p7, `vhc_roadtax` = @p8, `vhc_note` = @p9, `vhc_datecreate` = @p10, `vhc_lastupdate` = @p11, `vhc_obsolete` = @p12, `vhc_key_status` = @p13 WHERE ((`vhc_ID` = @p14) AND (`vhc_PlateNo` = @p15) AND (`vhc_brand` = @p16) AND (`vhc_model` = @p17) AND ((@p18 = 1 AND `vhc_type` IS NULL) OR (`vhc_type` = @p19)) AND ((@p20 = 1 AND `vhc_year` IS NULL) OR (`vhc_year` = @p21)) AND (`vhc_category` = @p22) AND (`vhc_roadtax` = @p23) AND (`vhc_datecreate` = @p24) AND (`vhc_lastupdate` = @p25) AND (`vhc_obsolete` = @p26) AND ((@p27 = 1 AND `vhc_key_status` IS NULL) OR (`vhc_key_status` = @p28)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_PlateNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_brand" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_model" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Object" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Blob" Scale="0" Size="0" SourceColumn="vhc_img" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_category" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_roadtax" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="vhc_note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_datecreate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vhc_lastupdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="vhc_obsolete" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_key_status" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_PlateNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_brand" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_model" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p20" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p21" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_year" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p22" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_category" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p23" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_roadtax" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p24" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vhc_datecreate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p25" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vhc_lastupdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="SByte" Direction="Input" ParameterName="@p26" Precision="0" ProviderType="Byte" Scale="0" Size="0" SourceColumn="vhc_obsolete" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p27" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vhc_key_status" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p28" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="vhc_key_status" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="vhc_ID" DataSetColumn="vhc_ID" />
+              <Mapping SourceColumn="vhc_PlateNo" DataSetColumn="vhc_PlateNo" />
+              <Mapping SourceColumn="vhc_brand" DataSetColumn="vhc_brand" />
+              <Mapping SourceColumn="vhc_model" DataSetColumn="vhc_model" />
+              <Mapping SourceColumn="vhc_type" DataSetColumn="vhc_type" />
+              <Mapping SourceColumn="vhc_img" DataSetColumn="vhc_img" />
+              <Mapping SourceColumn="vhc_year" DataSetColumn="vhc_year" />
+              <Mapping SourceColumn="vhc_category" DataSetColumn="vhc_category" />
+              <Mapping SourceColumn="vhc_roadtax" DataSetColumn="vhc_roadtax" />
+              <Mapping SourceColumn="vhc_note" DataSetColumn="vhc_note" />
+              <Mapping SourceColumn="vhc_datecreate" DataSetColumn="vhc_datecreate" />
+              <Mapping SourceColumn="vhc_lastupdate" DataSetColumn="vhc_lastupdate" />
+              <Mapping SourceColumn="vhc_obsolete" DataSetColumn="vhc_obsolete" />
+              <Mapping SourceColumn="vhc_key_status" DataSetColumn="vhc_key_status" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="lorry_rt_historyTableAdapter" GeneratorDataComponentClassName="lorry_rt_historyTableAdapter" Name="lorry_rt_history" UserDataComponentName="lorry_rt_historyTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectName="cbsbak.vehicle_rt_history" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `vehicle_rt_history` WHERE ((`vrth_ID` = @p1) AND (`vrth_vhcID` = @p2) AND (`vrth_expdate` = @p3) AND (`vrth_datechg` = @p4))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_vhcID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vrth_expdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vrth_datechg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `vehicle_rt_history` (`vrth_vhcID`, `vrth_expdate`, `vrth_note`, `vrth_datechg`) VALUES (@p1, @p2, @p3, @p4)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_vhcID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vrth_expdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="vrth_note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vrth_datechg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `vrth_ID`, `vrth_vhcID`, `vrth_expdate`, `vrth_note`, `vrth_datechg` FROM `vehicle_rt_history`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `vehicle_rt_history` SET `vrth_vhcID` = @p1, `vrth_expdate` = @p2, `vrth_note` = @p3, `vrth_datechg` = @p4 WHERE ((`vrth_ID` = @p5) AND (`vrth_vhcID` = @p6) AND (`vrth_expdate` = @p7) AND (`vrth_datechg` = @p8))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_vhcID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vrth_expdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Text" Scale="0" Size="0" SourceColumn="vrth_note" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vrth_datechg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_ID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="vrth_vhcID" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="vrth_expdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Timestamp" Scale="0" Size="0" SourceColumn="vrth_datechg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="vrth_ID" DataSetColumn="vrth_ID" />
+              <Mapping SourceColumn="vrth_vhcID" DataSetColumn="vrth_vhcID" />
+              <Mapping SourceColumn="vrth_expdate" DataSetColumn="vrth_expdate" />
+              <Mapping SourceColumn="vrth_note" DataSetColumn="vrth_note" />
+              <Mapping SourceColumn="vrth_datechg" DataSetColumn="vrth_datechg" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="cbsbakConnectionString1 (MySettings)" DbObjectName="cbsbak.vehicle_rt_history" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT vrth_ID, vrth_datechg, vrth_expdate, vrth_note, vrth_vhcID FROM vehicle_rt_history WHERE (vrth_vhcID = '@vhcID')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CBSDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CBSDataSet" msprop:Generator_UserDSName="CBSDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="login_log" msprop:Generator_TableClassName="login_logDataTable" msprop:Generator_TableVarName="tablelogin_log" msprop:Generator_TablePropName="login_log" msprop:Generator_RowDeletingName="login_logRowDeleting" msprop:Generator_RowChangingName="login_logRowChanging" msprop:Generator_RowEvHandlerName="login_logRowChangeEventHandler" msprop:Generator_RowDeletedName="login_logRowDeleted" msprop:Generator_UserTableName="login_log" msprop:Generator_RowChangedName="login_logRowChanged" msprop:Generator_RowEvArgName="login_logRowChangeEvent" msprop:Generator_RowClassName="login_logRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="login_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnlogin_ID" msprop:Generator_ColumnPropNameInRow="login_ID" msprop:Generator_ColumnPropNameInTable="login_IDColumn" msprop:Generator_UserColumnName="login_ID" type="xs:int" />
+              <xs:element name="login_usrname" msprop:Generator_ColumnVarNameInTable="columnlogin_usrname" msprop:Generator_ColumnPropNameInRow="login_usrname" msprop:Generator_ColumnPropNameInTable="login_usrnameColumn" msprop:Generator_UserColumnName="login_usrname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="login_pcusr" msprop:Generator_ColumnVarNameInTable="columnlogin_pcusr" msprop:Generator_ColumnPropNameInRow="login_pcusr" msprop:Generator_ColumnPropNameInTable="login_pcusrColumn" msprop:Generator_UserColumnName="login_pcusr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="login_pcname" msprop:Generator_ColumnVarNameInTable="columnlogin_pcname" msprop:Generator_ColumnPropNameInRow="login_pcname" msprop:Generator_ColumnPropNameInTable="login_pcnameColumn" msprop:Generator_UserColumnName="login_pcname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="login_date" msprop:Generator_ColumnVarNameInTable="columnlogin_date" msprop:Generator_ColumnPropNameInRow="login_date" msprop:Generator_ColumnPropNameInTable="login_dateColumn" msprop:Generator_UserColumnName="login_date" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="users" msprop:Generator_TableClassName="usersDataTable" msprop:Generator_TableVarName="tableusers" msprop:Generator_RowChangedName="usersRowChanged" msprop:Generator_TablePropName="users" msprop:Generator_RowDeletingName="usersRowDeleting" msprop:Generator_RowChangingName="usersRowChanging" msprop:Generator_RowEvHandlerName="usersRowChangeEventHandler" msprop:Generator_RowDeletedName="usersRowDeleted" msprop:Generator_RowClassName="usersRow" msprop:Generator_UserTableName="users" msprop:Generator_RowEvArgName="usersRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="usr_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnusr_ID" msprop:Generator_ColumnPropNameInRow="usr_ID" msprop:Generator_ColumnPropNameInTable="usr_IDColumn" msprop:Generator_UserColumnName="usr_ID" type="xs:int" />
+              <xs:element name="usr_name" msprop:Generator_ColumnVarNameInTable="columnusr_name" msprop:Generator_ColumnPropNameInRow="usr_name" msprop:Generator_ColumnPropNameInTable="usr_nameColumn" msprop:Generator_UserColumnName="usr_name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_shortname" msprop:Generator_ColumnVarNameInTable="columnusr_shortname" msprop:Generator_ColumnPropNameInRow="usr_shortname" msprop:Generator_ColumnPropNameInTable="usr_shortnameColumn" msprop:Generator_UserColumnName="usr_shortname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_username" msprop:Generator_ColumnVarNameInTable="columnusr_username" msprop:Generator_ColumnPropNameInRow="usr_username" msprop:Generator_ColumnPropNameInTable="usr_usernameColumn" msprop:Generator_UserColumnName="usr_username">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_password" msprop:Generator_ColumnVarNameInTable="columnusr_password" msprop:Generator_ColumnPropNameInRow="usr_password" msprop:Generator_ColumnPropNameInTable="usr_passwordColumn" msprop:Generator_UserColumnName="usr_password">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_datecreate" msprop:Generator_ColumnVarNameInTable="columnusr_datecreate" msprop:Generator_ColumnPropNameInRow="usr_datecreate" msprop:Generator_ColumnPropNameInTable="usr_datecreateColumn" msprop:Generator_UserColumnName="usr_datecreate" type="xs:dateTime" />
+              <xs:element name="usr_employeeID" msprop:Generator_ColumnVarNameInTable="columnusr_employeeID" msprop:Generator_ColumnPropNameInRow="usr_employeeID" msprop:Generator_ColumnPropNameInTable="usr_employeeIDColumn" msprop:Generator_UserColumnName="usr_employeeID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_department" msprop:Generator_ColumnVarNameInTable="columnusr_department" msprop:Generator_ColumnPropNameInRow="usr_department" msprop:Generator_ColumnPropNameInTable="usr_departmentColumn" msprop:Generator_UserColumnName="usr_department">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_email" msprop:Generator_ColumnVarNameInTable="columnusr_email" msprop:Generator_ColumnPropNameInRow="usr_email" msprop:Generator_ColumnPropNameInTable="usr_emailColumn" msprop:Generator_UserColumnName="usr_email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_active" msprop:Generator_ColumnVarNameInTable="columnusr_active" msprop:Generator_ColumnPropNameInRow="usr_active" msprop:Generator_ColumnPropNameInTable="usr_activeColumn" msprop:Generator_UserColumnName="usr_active" type="xs:boolean" />
+              <xs:element name="usr_level" msprop:Generator_ColumnVarNameInTable="columnusr_level" msprop:Generator_ColumnPropNameInRow="usr_level" msprop:Generator_ColumnPropNameInTable="usr_levelColumn" msprop:Generator_UserColumnName="usr_level" type="xs:int" />
+              <xs:element name="usr_lastupdate" msprop:Generator_ColumnVarNameInTable="columnusr_lastupdate" msprop:Generator_ColumnPropNameInRow="usr_lastupdate" msprop:Generator_ColumnPropNameInTable="usr_lastupdateColumn" msprop:Generator_UserColumnName="usr_lastupdate" type="xs:dateTime" />
+              <xs:element name="note" msprop:Generator_ColumnVarNameInTable="columnnote" msprop:Generator_ColumnPropNameInRow="note" msprop:Generator_ColumnPropNameInTable="noteColumn" msprop:Generator_UserColumnName="note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21845" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_category" msprop:Generator_ColumnVarNameInTable="columnusr_category" msprop:Generator_ColumnPropNameInRow="usr_category" msprop:Generator_ColumnPropNameInTable="usr_categoryColumn" msprop:Generator_UserColumnName="usr_category">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vehicle" msprop:Generator_TableClassName="vehicleDataTable" msprop:Generator_TableVarName="tablevehicle" msprop:Generator_RowChangedName="vehicleRowChanged" msprop:Generator_TablePropName="vehicle" msprop:Generator_RowDeletingName="vehicleRowDeleting" msprop:Generator_RowChangingName="vehicleRowChanging" msprop:Generator_RowEvHandlerName="vehicleRowChangeEventHandler" msprop:Generator_RowDeletedName="vehicleRowDeleted" msprop:Generator_RowClassName="vehicleRow" msprop:Generator_UserTableName="vehicle" msprop:Generator_RowEvArgName="vehicleRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vhc_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_ColumnVarNameInTable="columnvhc_ID" msprop:Generator_ColumnPropNameInRow="vhc_ID" msprop:Generator_ColumnPropNameInTable="vhc_IDColumn" msprop:Generator_UserColumnName="vhc_ID" type="xs:int" />
+              <xs:element name="vhc_PlateNo" msprop:Generator_ColumnVarNameInTable="columnvhc_PlateNo" msprop:Generator_ColumnPropNameInRow="vhc_PlateNo" msprop:Generator_ColumnPropNameInTable="vhc_PlateNoColumn" msprop:Generator_UserColumnName="vhc_PlateNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_brand" msprop:Generator_ColumnVarNameInTable="columnvhc_brand" msprop:Generator_ColumnPropNameInRow="vhc_brand" msprop:Generator_ColumnPropNameInTable="vhc_brandColumn" msprop:Generator_UserColumnName="vhc_brand">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_model" msprop:Generator_ColumnVarNameInTable="columnvhc_model" msprop:Generator_ColumnPropNameInRow="vhc_model" msprop:Generator_ColumnPropNameInTable="vhc_modelColumn" msprop:Generator_UserColumnName="vhc_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_roadtax" msprop:Generator_ColumnVarNameInTable="columnvhc_roadtax" msprop:Generator_ColumnPropNameInRow="vhc_roadtax" msprop:Generator_ColumnPropNameInTable="vhc_roadtaxColumn" msprop:Generator_UserColumnName="vhc_roadtax" type="xs:dateTime" />
+              <xs:element name="vhc_note" msprop:Generator_ColumnVarNameInTable="columnvhc_note" msprop:Generator_ColumnPropNameInRow="vhc_note" msprop:Generator_ColumnPropNameInTable="vhc_noteColumn" msprop:Generator_UserColumnName="vhc_note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21845" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_datecreate" msprop:Generator_ColumnVarNameInTable="columnvhc_datecreate" msprop:Generator_ColumnPropNameInRow="vhc_datecreate" msprop:Generator_ColumnPropNameInTable="vhc_datecreateColumn" msprop:Generator_UserColumnName="vhc_datecreate" type="xs:dateTime" />
+              <xs:element name="vhc_type" msprop:Generator_ColumnVarNameInTable="columnvhc_type" msprop:Generator_ColumnPropNameInRow="vhc_type" msprop:Generator_ColumnPropNameInTable="vhc_typeColumn" msprop:Generator_UserColumnName="vhc_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_year" msprop:Generator_ColumnVarNameInTable="columnvhc_year" msprop:Generator_ColumnPropNameInRow="vhc_year" msprop:Generator_ColumnPropNameInTable="vhc_yearColumn" msprop:Generator_UserColumnName="vhc_year" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_obsolete" msprop:Generator_ColumnVarNameInTable="columnvhc_obsolete" msprop:Generator_ColumnPropNameInRow="vhc_obsolete" msprop:Generator_ColumnPropNameInTable="vhc_obsoleteColumn" msprop:Generator_UserColumnName="vhc_obsolete" type="xs:byte" />
+              <xs:element name="vhc_category" msprop:Generator_ColumnVarNameInTable="columnvhc_category" msprop:Generator_ColumnPropNameInRow="vhc_category" msprop:Generator_ColumnPropNameInTable="vhc_categoryColumn" msprop:Generator_UserColumnName="vhc_category">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_key_status" msprop:Generator_ColumnVarNameInTable="columnvhc_key_status" msprop:Generator_ColumnPropNameInRow="vhc_key_status" msprop:Generator_ColumnPropNameInTable="vhc_key_statusColumn" msprop:Generator_UserColumnName="vhc_key_status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="vehicle_rt_history" msprop:Generator_TableClassName="vehicle_rt_historyDataTable" msprop:Generator_TableVarName="tablevehicle_rt_history" msprop:Generator_RowChangedName="vehicle_rt_historyRowChanged" msprop:Generator_TablePropName="vehicle_rt_history" msprop:Generator_RowDeletingName="vehicle_rt_historyRowDeleting" msprop:Generator_RowChangingName="vehicle_rt_historyRowChanging" msprop:Generator_RowEvHandlerName="vehicle_rt_historyRowChangeEventHandler" msprop:Generator_RowDeletedName="vehicle_rt_historyRowDeleted" msprop:Generator_RowClassName="vehicle_rt_historyRow" msprop:Generator_UserTableName="vehicle_rt_history" msprop:Generator_RowEvArgName="vehicle_rt_historyRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vrth_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnvrth_ID" msprop:Generator_ColumnPropNameInRow="vrth_ID" msprop:Generator_ColumnPropNameInTable="vrth_IDColumn" msprop:Generator_UserColumnName="vrth_ID" type="xs:int" />
+              <xs:element name="vrth_vhcID" msprop:Generator_ColumnVarNameInTable="columnvrth_vhcID" msprop:Generator_ColumnPropNameInRow="vrth_vhcID" msprop:Generator_ColumnPropNameInTable="vrth_vhcIDColumn" msprop:Generator_UserColumnName="vrth_vhcID" type="xs:int" />
+              <xs:element name="vrth_expdate" msprop:Generator_ColumnVarNameInTable="columnvrth_expdate" msprop:Generator_ColumnPropNameInRow="vrth_expdate" msprop:Generator_ColumnPropNameInTable="vrth_expdateColumn" msprop:Generator_UserColumnName="vrth_expdate" type="xs:dateTime" />
+              <xs:element name="vrth_note" msprop:Generator_ColumnVarNameInTable="columnvrth_note" msprop:Generator_ColumnPropNameInRow="vrth_note" msprop:Generator_ColumnPropNameInTable="vrth_noteColumn" msprop:Generator_UserColumnName="vrth_note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21845" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vrth_datechg" msprop:Generator_ColumnVarNameInTable="columnvrth_datechg" msprop:Generator_ColumnPropNameInRow="vrth_datechg" msprop:Generator_ColumnPropNameInTable="vrth_datechgColumn" msprop:Generator_UserColumnName="vrth_datechg" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="booking" msprop:Generator_TableClassName="bookingDataTable" msprop:Generator_TableVarName="tablebooking" msprop:Generator_RowChangedName="bookingRowChanged" msprop:Generator_TablePropName="booking" msprop:Generator_RowDeletingName="bookingRowDeleting" msprop:Generator_RowChangingName="bookingRowChanging" msprop:Generator_RowEvHandlerName="bookingRowChangeEventHandler" msprop:Generator_RowDeletedName="bookingRowDeleted" msprop:Generator_RowClassName="bookingRow" msprop:Generator_UserTableName="booking" msprop:Generator_RowEvArgName="bookingRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bk_ID" msprop:Generator_ColumnVarNameInTable="columnbk_ID" msprop:Generator_ColumnPropNameInRow="bk_ID" msprop:Generator_ColumnPropNameInTable="bk_IDColumn" msprop:Generator_UserColumnName="bk_ID" type="xs:int" />
+              <xs:element name="bk_createbyID" msprop:Generator_ColumnVarNameInTable="columnbk_createbyID" msprop:Generator_ColumnPropNameInRow="bk_createbyID" msprop:Generator_ColumnPropNameInTable="bk_createbyIDColumn" msprop:Generator_UserColumnName="bk_createbyID" type="xs:int" />
+              <xs:element name="bk_vhcID" msprop:Generator_ColumnVarNameInTable="columnbk_vhcID" msprop:Generator_ColumnPropNameInRow="bk_vhcID" msprop:Generator_ColumnPropNameInTable="bk_vhcIDColumn" msprop:Generator_UserColumnName="bk_vhcID" type="xs:int" />
+              <xs:element name="bk_name" msprop:Generator_ColumnVarNameInTable="columnbk_name" msprop:Generator_ColumnPropNameInRow="bk_name" msprop:Generator_ColumnPropNameInTable="bk_nameColumn" msprop:Generator_UserColumnName="bk_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_empID" msprop:Generator_ColumnVarNameInTable="columnbk_empID" msprop:Generator_ColumnPropNameInRow="bk_empID" msprop:Generator_ColumnPropNameInTable="bk_empIDColumn" msprop:Generator_UserColumnName="bk_empID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_dept" msprop:Generator_ColumnVarNameInTable="columnbk_dept" msprop:Generator_ColumnPropNameInRow="bk_dept" msprop:Generator_ColumnPropNameInTable="bk_deptColumn" msprop:Generator_UserColumnName="bk_dept" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_dateBook" msprop:Generator_ColumnVarNameInTable="columnbk_dateBook" msprop:Generator_ColumnPropNameInRow="bk_dateBook" msprop:Generator_ColumnPropNameInTable="bk_dateBookColumn" msprop:Generator_UserColumnName="bk_dateBook" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_vhccollect" msprop:Generator_ColumnVarNameInTable="columnbk_vhccollect" msprop:Generator_ColumnPropNameInRow="bk_vhccollect" msprop:Generator_ColumnPropNameInTable="bk_vhccollectColumn" msprop:Generator_UserColumnName="bk_vhccollect" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_vhcreturn" msprop:Generator_ColumnVarNameInTable="columnbk_vhcreturn" msprop:Generator_ColumnPropNameInRow="bk_vhcreturn" msprop:Generator_ColumnPropNameInTable="bk_vhcreturnColumn" msprop:Generator_UserColumnName="bk_vhcreturn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_loctogo" msprop:Generator_ColumnVarNameInTable="columnbk_loctogo" msprop:Generator_ColumnPropNameInRow="bk_loctogo" msprop:Generator_ColumnPropNameInTable="bk_loctogoColumn" msprop:Generator_UserColumnName="bk_loctogo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_reason" msprop:Generator_ColumnVarNameInTable="columnbk_reason" msprop:Generator_ColumnPropNameInRow="bk_reason" msprop:Generator_ColumnPropNameInTable="bk_reasonColumn" msprop:Generator_UserColumnName="bk_reason" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21845" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_outmeter" msprop:Generator_ColumnVarNameInTable="columnbk_outmeter" msprop:Generator_ColumnPropNameInRow="bk_outmeter" msprop:Generator_ColumnPropNameInTable="bk_outmeterColumn" msprop:Generator_UserColumnName="bk_outmeter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_inmeter" msprop:Generator_ColumnVarNameInTable="columnbk_inmeter" msprop:Generator_ColumnPropNameInRow="bk_inmeter" msprop:Generator_ColumnPropNameInTable="bk_inmeterColumn" msprop:Generator_UserColumnName="bk_inmeter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_intime" msprop:Generator_ColumnVarNameInTable="columnbk_intime" msprop:Generator_ColumnPropNameInRow="bk_intime" msprop:Generator_ColumnPropNameInTable="bk_intimeColumn" msprop:Generator_UserColumnName="bk_intime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_outtime" msprop:Generator_ColumnVarNameInTable="columnbk_outtime" msprop:Generator_ColumnPropNameInRow="bk_outtime" msprop:Generator_ColumnPropNameInTable="bk_outtimeColumn" msprop:Generator_UserColumnName="bk_outtime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_approval" msprop:Generator_ColumnVarNameInTable="columnbk_approval" msprop:Generator_ColumnPropNameInRow="bk_approval" msprop:Generator_ColumnPropNameInTable="bk_approvalColumn" msprop:Generator_UserColumnName="bk_approval" type="xs:byte" minOccurs="0" />
+              <xs:element name="bk_approveby" msprop:Generator_ColumnVarNameInTable="columnbk_approveby" msprop:Generator_ColumnPropNameInRow="bk_approveby" msprop:Generator_ColumnPropNameInTable="bk_approvebyColumn" msprop:Generator_UserColumnName="bk_approveby" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_modifydate" msprop:Generator_ColumnVarNameInTable="columnbk_modifydate" msprop:Generator_ColumnPropNameInRow="bk_modifydate" msprop:Generator_ColumnPropNameInTable="bk_modifydateColumn" msprop:Generator_UserColumnName="bk_modifydate" type="xs:dateTime" />
+              <xs:element name="bk_bdate" msprop:Generator_ColumnVarNameInTable="columnbk_bdate" msprop:Generator_ColumnPropNameInRow="bk_bdate" msprop:Generator_ColumnPropNameInTable="bk_bdateColumn" msprop:Generator_UserColumnName="bk_bdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_approva_text" msprop:Generator_ColumnVarNameInTable="columnbk_approva_text" msprop:Generator_ColumnPropNameInRow="bk_approva_text" msprop:Generator_ColumnPropNameInTable="bk_approva_textColumn" msprop:Generator_UserColumnName="bk_approva_text" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_complete" msprop:Generator_ColumnVarNameInTable="columnbk_complete" msprop:Generator_ColumnPropNameInRow="bk_complete" msprop:Generator_ColumnPropNameInTable="bk_completeColumn" msprop:Generator_UserColumnName="bk_complete" type="xs:int" />
+              <xs:element name="bk_OUTcheckbyID" msprop:Generator_ColumnVarNameInTable="columnbk_OUTcheckbyID" msprop:Generator_ColumnPropNameInRow="bk_OUTcheckbyID" msprop:Generator_ColumnPropNameInTable="bk_OUTcheckbyIDColumn" msprop:Generator_UserColumnName="bk_OUTcheckbyID" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_INcheckbyID" msprop:Generator_ColumnVarNameInTable="columnbk_INcheckbyID" msprop:Generator_ColumnPropNameInRow="bk_INcheckbyID" msprop:Generator_ColumnPropNameInTable="bk_INcheckbyIDColumn" msprop:Generator_UserColumnName="bk_INcheckbyID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="bkslip" msprop:Generator_TableClassName="bkslipDataTable" msprop:Generator_TableVarName="tablebkslip" msprop:Generator_TablePropName="bkslip" msprop:Generator_RowDeletingName="bkslipRowDeleting" msprop:Generator_RowChangingName="bkslipRowChanging" msprop:Generator_RowEvHandlerName="bkslipRowChangeEventHandler" msprop:Generator_RowDeletedName="bkslipRowDeleted" msprop:Generator_UserTableName="bkslip" msprop:Generator_RowChangedName="bkslipRowChanged" msprop:Generator_RowEvArgName="bkslipRowChangeEvent" msprop:Generator_RowClassName="bkslipRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="bk_ID" msprop:Generator_ColumnVarNameInTable="columnbk_ID" msprop:Generator_ColumnPropNameInRow="bk_ID" msprop:Generator_ColumnPropNameInTable="bk_IDColumn" msprop:Generator_UserColumnName="bk_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_createbyID" msprop:Generator_ColumnVarNameInTable="columnbk_createbyID" msprop:Generator_ColumnPropNameInRow="bk_createbyID" msprop:Generator_ColumnPropNameInTable="bk_createbyIDColumn" msprop:Generator_UserColumnName="bk_createbyID" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_vhcID" msprop:Generator_ColumnVarNameInTable="columnbk_vhcID" msprop:Generator_ColumnPropNameInRow="bk_vhcID" msprop:Generator_ColumnPropNameInTable="bk_vhcIDColumn" msprop:Generator_UserColumnName="bk_vhcID" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_name" msprop:Generator_ColumnVarNameInTable="columnbk_name" msprop:Generator_ColumnPropNameInRow="bk_name" msprop:Generator_ColumnPropNameInTable="bk_nameColumn" msprop:Generator_UserColumnName="bk_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_empID" msprop:Generator_ColumnVarNameInTable="columnbk_empID" msprop:Generator_ColumnPropNameInRow="bk_empID" msprop:Generator_ColumnPropNameInTable="bk_empIDColumn" msprop:Generator_UserColumnName="bk_empID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_dept" msprop:Generator_ColumnVarNameInTable="columnbk_dept" msprop:Generator_ColumnPropNameInRow="bk_dept" msprop:Generator_ColumnPropNameInTable="bk_deptColumn" msprop:Generator_UserColumnName="bk_dept" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_dateBook" msprop:Generator_ColumnVarNameInTable="columnbk_dateBook" msprop:Generator_ColumnPropNameInRow="bk_dateBook" msprop:Generator_ColumnPropNameInTable="bk_dateBookColumn" msprop:Generator_UserColumnName="bk_dateBook" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_bdate" msprop:Generator_ColumnVarNameInTable="columnbk_bdate" msprop:Generator_ColumnPropNameInRow="bk_bdate" msprop:Generator_ColumnPropNameInTable="bk_bdateColumn" msprop:Generator_UserColumnName="bk_bdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_vhccollect" msprop:Generator_ColumnVarNameInTable="columnbk_vhccollect" msprop:Generator_ColumnPropNameInRow="bk_vhccollect" msprop:Generator_ColumnPropNameInTable="bk_vhccollectColumn" msprop:Generator_UserColumnName="bk_vhccollect" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_vhcreturn" msprop:Generator_ColumnVarNameInTable="columnbk_vhcreturn" msprop:Generator_ColumnPropNameInRow="bk_vhcreturn" msprop:Generator_ColumnPropNameInTable="bk_vhcreturnColumn" msprop:Generator_UserColumnName="bk_vhcreturn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_loctogo" msprop:Generator_ColumnVarNameInTable="columnbk_loctogo" msprop:Generator_ColumnPropNameInRow="bk_loctogo" msprop:Generator_ColumnPropNameInTable="bk_loctogoColumn" msprop:Generator_UserColumnName="bk_loctogo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_reason" msprop:Generator_ColumnVarNameInTable="columnbk_reason" msprop:Generator_ColumnPropNameInRow="bk_reason" msprop:Generator_ColumnPropNameInTable="bk_reasonColumn" msprop:Generator_UserColumnName="bk_reason" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21845" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_outmeter" msprop:Generator_ColumnVarNameInTable="columnbk_outmeter" msprop:Generator_ColumnPropNameInRow="bk_outmeter" msprop:Generator_ColumnPropNameInTable="bk_outmeterColumn" msprop:Generator_UserColumnName="bk_outmeter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_inmeter" msprop:Generator_ColumnVarNameInTable="columnbk_inmeter" msprop:Generator_ColumnPropNameInRow="bk_inmeter" msprop:Generator_ColumnPropNameInTable="bk_inmeterColumn" msprop:Generator_UserColumnName="bk_inmeter" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_intime" msprop:Generator_ColumnVarNameInTable="columnbk_intime" msprop:Generator_ColumnPropNameInRow="bk_intime" msprop:Generator_ColumnPropNameInTable="bk_intimeColumn" msprop:Generator_UserColumnName="bk_intime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_outtime" msprop:Generator_ColumnVarNameInTable="columnbk_outtime" msprop:Generator_ColumnPropNameInRow="bk_outtime" msprop:Generator_ColumnPropNameInTable="bk_outtimeColumn" msprop:Generator_UserColumnName="bk_outtime" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="bk_approva_text" msprop:Generator_ColumnVarNameInTable="columnbk_approva_text" msprop:Generator_ColumnPropNameInRow="bk_approva_text" msprop:Generator_ColumnPropNameInTable="bk_approva_textColumn" msprop:Generator_UserColumnName="bk_approva_text" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_approveby" msprop:Generator_ColumnVarNameInTable="columnbk_approveby" msprop:Generator_ColumnPropNameInRow="bk_approveby" msprop:Generator_ColumnPropNameInTable="bk_approvebyColumn" msprop:Generator_UserColumnName="bk_approveby" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_complete" msprop:Generator_ColumnVarNameInTable="columnbk_complete" msprop:Generator_ColumnPropNameInRow="bk_complete" msprop:Generator_ColumnPropNameInTable="bk_completeColumn" msprop:Generator_UserColumnName="bk_complete" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_modifydate" msprop:Generator_ColumnVarNameInTable="columnbk_modifydate" msprop:Generator_ColumnPropNameInRow="bk_modifydate" msprop:Generator_ColumnPropNameInTable="bk_modifydateColumn" msprop:Generator_UserColumnName="bk_modifydate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="usr_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnusr_ID" msprop:Generator_ColumnPropNameInRow="usr_ID" msprop:Generator_ColumnPropNameInTable="usr_IDColumn" msprop:Generator_UserColumnName="usr_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="usr_name" msprop:Generator_ColumnVarNameInTable="columnusr_name" msprop:Generator_ColumnPropNameInRow="usr_name" msprop:Generator_ColumnPropNameInTable="usr_nameColumn" msprop:Generator_UserColumnName="usr_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_shortname" msprop:Generator_ColumnVarNameInTable="columnusr_shortname" msprop:Generator_ColumnPropNameInRow="usr_shortname" msprop:Generator_ColumnPropNameInTable="usr_shortnameColumn" msprop:Generator_UserColumnName="usr_shortname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_username" msprop:Generator_ColumnVarNameInTable="columnusr_username" msprop:Generator_ColumnPropNameInRow="usr_username" msprop:Generator_ColumnPropNameInTable="usr_usernameColumn" msprop:Generator_UserColumnName="usr_username" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_password" msprop:Generator_ColumnVarNameInTable="columnusr_password" msprop:Generator_ColumnPropNameInRow="usr_password" msprop:Generator_ColumnPropNameInTable="usr_passwordColumn" msprop:Generator_UserColumnName="usr_password" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_datecreate" msprop:Generator_ColumnVarNameInTable="columnusr_datecreate" msprop:Generator_ColumnPropNameInRow="usr_datecreate" msprop:Generator_ColumnPropNameInTable="usr_datecreateColumn" msprop:Generator_UserColumnName="usr_datecreate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="usr_employeeID" msprop:Generator_ColumnVarNameInTable="columnusr_employeeID" msprop:Generator_ColumnPropNameInRow="usr_employeeID" msprop:Generator_ColumnPropNameInTable="usr_employeeIDColumn" msprop:Generator_UserColumnName="usr_employeeID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_department" msprop:Generator_ColumnVarNameInTable="columnusr_department" msprop:Generator_ColumnPropNameInRow="usr_department" msprop:Generator_ColumnPropNameInTable="usr_departmentColumn" msprop:Generator_UserColumnName="usr_department" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_email" msprop:Generator_ColumnVarNameInTable="columnusr_email" msprop:Generator_ColumnPropNameInRow="usr_email" msprop:Generator_ColumnPropNameInTable="usr_emailColumn" msprop:Generator_UserColumnName="usr_email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_active" msprop:Generator_ColumnVarNameInTable="columnusr_active" msprop:Generator_ColumnPropNameInRow="usr_active" msprop:Generator_ColumnPropNameInTable="usr_activeColumn" msprop:Generator_UserColumnName="usr_active" type="xs:boolean" minOccurs="0" />
+              <xs:element name="usr_level" msprop:Generator_ColumnVarNameInTable="columnusr_level" msprop:Generator_ColumnPropNameInRow="usr_level" msprop:Generator_ColumnPropNameInTable="usr_levelColumn" msprop:Generator_UserColumnName="usr_level" type="xs:int" minOccurs="0" />
+              <xs:element name="usr_lastupdate" msprop:Generator_ColumnVarNameInTable="columnusr_lastupdate" msprop:Generator_ColumnPropNameInRow="usr_lastupdate" msprop:Generator_ColumnPropNameInTable="usr_lastupdateColumn" msprop:Generator_UserColumnName="usr_lastupdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="note" msprop:Generator_ColumnVarNameInTable="columnnote" msprop:Generator_ColumnPropNameInRow="note" msprop:Generator_ColumnPropNameInTable="noteColumn" msprop:Generator_UserColumnName="note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21845" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnvhc_ID" msprop:Generator_ColumnPropNameInRow="vhc_ID" msprop:Generator_ColumnPropNameInTable="vhc_IDColumn" msprop:Generator_UserColumnName="vhc_ID" type="xs:int" minOccurs="0" />
+              <xs:element name="vhc_PlateNo" msprop:Generator_ColumnVarNameInTable="columnvhc_PlateNo" msprop:Generator_ColumnPropNameInRow="vhc_PlateNo" msprop:Generator_ColumnPropNameInTable="vhc_PlateNoColumn" msprop:Generator_UserColumnName="vhc_PlateNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_brand" msprop:Generator_ColumnVarNameInTable="columnvhc_brand" msprop:Generator_ColumnPropNameInRow="vhc_brand" msprop:Generator_ColumnPropNameInTable="vhc_brandColumn" msprop:Generator_UserColumnName="vhc_brand" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_model" msprop:Generator_ColumnVarNameInTable="columnvhc_model" msprop:Generator_ColumnPropNameInRow="vhc_model" msprop:Generator_ColumnPropNameInTable="vhc_modelColumn" msprop:Generator_UserColumnName="vhc_model" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_type" msprop:Generator_ColumnVarNameInTable="columnvhc_type" msprop:Generator_ColumnPropNameInRow="vhc_type" msprop:Generator_ColumnPropNameInTable="vhc_typeColumn" msprop:Generator_UserColumnName="vhc_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_img" msprop:Generator_ColumnVarNameInTable="columnvhc_img" msprop:Generator_ColumnPropNameInRow="vhc_img" msprop:Generator_ColumnPropNameInTable="vhc_imgColumn" msprop:Generator_UserColumnName="vhc_img" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="vhc_year" msprop:Generator_ColumnVarNameInTable="columnvhc_year" msprop:Generator_ColumnPropNameInRow="vhc_year" msprop:Generator_ColumnPropNameInTable="vhc_yearColumn" msprop:Generator_UserColumnName="vhc_year" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_roadtax" msprop:Generator_ColumnVarNameInTable="columnvhc_roadtax" msprop:Generator_ColumnPropNameInRow="vhc_roadtax" msprop:Generator_ColumnPropNameInTable="vhc_roadtaxColumn" msprop:Generator_UserColumnName="vhc_roadtax" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="vhc_note" msprop:Generator_ColumnVarNameInTable="columnvhc_note" msprop:Generator_ColumnPropNameInRow="vhc_note" msprop:Generator_ColumnPropNameInTable="vhc_noteColumn" msprop:Generator_UserColumnName="vhc_note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21845" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_datecreate" msprop:Generator_ColumnVarNameInTable="columnvhc_datecreate" msprop:Generator_ColumnPropNameInRow="vhc_datecreate" msprop:Generator_ColumnPropNameInTable="vhc_datecreateColumn" msprop:Generator_UserColumnName="vhc_datecreate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="vhc_lastupdate" msprop:Generator_ColumnVarNameInTable="columnvhc_lastupdate" msprop:Generator_ColumnPropNameInRow="vhc_lastupdate" msprop:Generator_ColumnPropNameInTable="vhc_lastupdateColumn" msprop:Generator_UserColumnName="vhc_lastupdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="vhc_obsolete" msprop:Generator_ColumnVarNameInTable="columnvhc_obsolete" msprop:Generator_ColumnPropNameInRow="vhc_obsolete" msprop:Generator_ColumnPropNameInTable="vhc_obsoleteColumn" msprop:Generator_UserColumnName="vhc_obsolete" type="xs:byte" minOccurs="0" />
+              <xs:element name="bk_vhcCategory" msprop:Generator_ColumnVarNameInTable="columnbk_vhcCategory" msprop:Generator_ColumnPropNameInRow="bk_vhcCategory" msprop:Generator_ColumnPropNameInTable="bk_vhcCategoryColumn" msprop:Generator_UserColumnName="bk_vhcCategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_OUTcheckbyID" msprop:Generator_ColumnVarNameInTable="columnbk_OUTcheckbyID" msprop:Generator_ColumnPropNameInRow="bk_OUTcheckbyID" msprop:Generator_ColumnPropNameInTable="bk_OUTcheckbyIDColumn" msprop:Generator_UserColumnName="bk_OUTcheckbyID" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_INcheckbyID" msprop:Generator_ColumnVarNameInTable="columnbk_INcheckbyID" msprop:Generator_ColumnPropNameInRow="bk_INcheckbyID" msprop:Generator_ColumnPropNameInTable="bk_INcheckbyIDColumn" msprop:Generator_UserColumnName="bk_INcheckbyID" type="xs:int" minOccurs="0" />
+              <xs:element name="bk_OUTcheckbyName" msprop:Generator_ColumnVarNameInTable="columnbk_OUTcheckbyName" msprop:Generator_ColumnPropNameInRow="bk_OUTcheckbyName" msprop:Generator_ColumnPropNameInTable="bk_OUTcheckbyNameColumn" msprop:Generator_UserColumnName="bk_OUTcheckbyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_INcheckbyName" msprop:Generator_ColumnVarNameInTable="columnbk_INcheckbyName" msprop:Generator_ColumnPropNameInRow="bk_INcheckbyName" msprop:Generator_ColumnPropNameInTable="bk_INcheckbyNameColumn" msprop:Generator_UserColumnName="bk_INcheckbyName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="usr_category" msprop:Generator_ColumnVarNameInTable="columnusr_category" msprop:Generator_ColumnPropNameInRow="usr_category" msprop:Generator_ColumnPropNameInTable="usr_categoryColumn" msprop:Generator_UserColumnName="usr_category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_category" msprop:Generator_ColumnVarNameInTable="columnvhc_category" msprop:Generator_ColumnPropNameInRow="vhc_category" msprop:Generator_ColumnPropNameInTable="vhc_categoryColumn" msprop:Generator_UserColumnName="vhc_category" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_key_status" msprop:Generator_ColumnVarNameInTable="columnvhc_key_status" msprop:Generator_ColumnPropNameInRow="vhc_key_status" msprop:Generator_ColumnPropNameInTable="vhc_key_statusColumn" msprop:Generator_UserColumnName="vhc_key_status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="bk_approval" msprop:Generator_ColumnVarNameInTable="columnbk_approval" msprop:Generator_ColumnPropNameInRow="bk_approval" msprop:Generator_ColumnPropNameInTable="bk_approvalColumn" msprop:Generator_UserColumnName="bk_approval" type="xs:int" minOccurs="0" />
+              <xs:element name="vhcacc_crmeter" msprop:Generator_ColumnVarNameInTable="columnvhcacc_crmeter" msprop:Generator_ColumnPropNameInRow="vhcacc_crmeter" msprop:Generator_ColumnPropNameInTable="vhcacc_crmeterColumn" msprop:Generator_UserColumnName="vhcacc_crmeter" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lorry_rt_history" msprop:Generator_TableClassName="lorry_rt_historyDataTable" msprop:Generator_TableVarName="tablelorry_rt_history" msprop:Generator_RowChangedName="lorry_rt_historyRowChanged" msprop:Generator_TablePropName="lorry_rt_history" msprop:Generator_RowDeletingName="lorry_rt_historyRowDeleting" msprop:Generator_RowChangingName="lorry_rt_historyRowChanging" msprop:Generator_RowEvHandlerName="lorry_rt_historyRowChangeEventHandler" msprop:Generator_RowDeletedName="lorry_rt_historyRowDeleted" msprop:Generator_RowClassName="lorry_rt_historyRow" msprop:Generator_UserTableName="lorry_rt_history" msprop:Generator_RowEvArgName="lorry_rt_historyRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vrth_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnvrth_ID" msprop:Generator_ColumnPropNameInRow="vrth_ID" msprop:Generator_ColumnPropNameInTable="vrth_IDColumn" msprop:Generator_UserColumnName="vrth_ID" type="xs:int" />
+              <xs:element name="vrth_vhcID" msprop:Generator_ColumnVarNameInTable="columnvrth_vhcID" msprop:Generator_ColumnPropNameInRow="vrth_vhcID" msprop:Generator_ColumnPropNameInTable="vrth_vhcIDColumn" msprop:Generator_UserColumnName="vrth_vhcID" type="xs:int" />
+              <xs:element name="vrth_expdate" msprop:Generator_ColumnVarNameInTable="columnvrth_expdate" msprop:Generator_ColumnPropNameInRow="vrth_expdate" msprop:Generator_ColumnPropNameInTable="vrth_expdateColumn" msprop:Generator_UserColumnName="vrth_expdate" type="xs:dateTime" />
+              <xs:element name="vrth_note" msprop:Generator_ColumnVarNameInTable="columnvrth_note" msprop:Generator_ColumnPropNameInRow="vrth_note" msprop:Generator_ColumnPropNameInTable="vrth_noteColumn" msprop:Generator_UserColumnName="vrth_note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="21845" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vrth_datechg" msprop:Generator_ColumnVarNameInTable="columnvrth_datechg" msprop:Generator_ColumnPropNameInRow="vrth_datechg" msprop:Generator_ColumnPropNameInTable="vrth_datechgColumn" msprop:Generator_UserColumnName="vrth_datechg" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="lorry" msprop:Generator_TableClassName="lorryDataTable" msprop:Generator_TableVarName="tablelorry" msprop:Generator_TablePropName="lorry" msprop:Generator_RowDeletingName="lorryRowDeleting" msprop:Generator_RowChangingName="lorryRowChanging" msprop:Generator_RowEvHandlerName="lorryRowChangeEventHandler" msprop:Generator_RowDeletedName="lorryRowDeleted" msprop:Generator_UserTableName="lorry" msprop:Generator_RowChangedName="lorryRowChanged" msprop:Generator_RowEvArgName="lorryRowChangeEvent" msprop:Generator_RowClassName="lorryRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vhc_ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnvhc_ID" msprop:Generator_ColumnPropNameInRow="vhc_ID" msprop:Generator_ColumnPropNameInTable="vhc_IDColumn" msprop:Generator_UserColumnName="vhc_ID" type="xs:int" />
+              <xs:element name="vhc_PlateNo" msprop:Generator_ColumnVarNameInTable="columnvhc_PlateNo" msprop:Generator_ColumnPropNameInRow="vhc_PlateNo" msprop:Generator_ColumnPropNameInTable="vhc_PlateNoColumn" msprop:Generator_UserColumnName="vhc_PlateNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_brand" msprop:Generator_ColumnVarNameInTable="columnvhc_brand" msprop:Generator_ColumnPropNameInRow="vhc_brand" msprop:Generator_ColumnPropNameInTable="vhc_brandColumn" msprop:Generator_UserColumnName="vhc_brand">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_model" msprop:Generator_ColumnVarNameInTable="columnvhc_model" msprop:Generator_ColumnPropNameInRow="vhc_model" msprop:Generator_ColumnPropNameInTable="vhc_modelColumn" msprop:Generator_UserColumnName="vhc_model">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_type" msprop:Generator_ColumnVarNameInTable="columnvhc_type" msprop:Generator_ColumnPropNameInRow="vhc_type" msprop:Generator_ColumnPropNameInTable="vhc_typeColumn" msprop:Generator_UserColumnName="vhc_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_img" msprop:Generator_ColumnVarNameInTable="columnvhc_img" msprop:Generator_ColumnPropNameInRow="vhc_img" msprop:Generator_ColumnPropNameInTable="vhc_imgColumn" msprop:Generator_UserColumnName="vhc_img" type="xs:base64Binary" />
+              <xs:element name="vhc_year" msprop:Generator_ColumnVarNameInTable="columnvhc_year" msprop:Generator_ColumnPropNameInRow="vhc_year" msprop:Generator_ColumnPropNameInTable="vhc_yearColumn" msprop:Generator_UserColumnName="vhc_year" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_category" msprop:Generator_ColumnVarNameInTable="columnvhc_category" msprop:Generator_ColumnPropNameInRow="vhc_category" msprop:Generator_ColumnPropNameInTable="vhc_categoryColumn" msprop:Generator_UserColumnName="vhc_category">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_roadtax" msprop:Generator_ColumnVarNameInTable="columnvhc_roadtax" msprop:Generator_ColumnPropNameInRow="vhc_roadtax" msprop:Generator_ColumnPropNameInTable="vhc_roadtaxColumn" msprop:Generator_UserColumnName="vhc_roadtax" type="xs:dateTime" />
+              <xs:element name="vhc_note" msprop:Generator_ColumnVarNameInTable="columnvhc_note" msprop:Generator_ColumnPropNameInRow="vhc_note" msprop:Generator_ColumnPropNameInTable="vhc_noteColumn" msprop:Generator_UserColumnName="vhc_note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="65535" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="vhc_datecreate" msprop:Generator_ColumnVarNameInTable="columnvhc_datecreate" msprop:Generator_ColumnPropNameInRow="vhc_datecreate" msprop:Generator_ColumnPropNameInTable="vhc_datecreateColumn" msprop:Generator_UserColumnName="vhc_datecreate" type="xs:dateTime" />
+              <xs:element name="vhc_lastupdate" msprop:Generator_ColumnVarNameInTable="columnvhc_lastupdate" msprop:Generator_ColumnPropNameInRow="vhc_lastupdate" msprop:Generator_ColumnPropNameInTable="vhc_lastupdateColumn" msprop:Generator_UserColumnName="vhc_lastupdate" type="xs:dateTime" />
+              <xs:element name="vhc_obsolete" msprop:Generator_ColumnVarNameInTable="columnvhc_obsolete" msprop:Generator_ColumnPropNameInRow="vhc_obsolete" msprop:Generator_ColumnPropNameInTable="vhc_obsoleteColumn" msprop:Generator_UserColumnName="vhc_obsolete" type="xs:byte" />
+              <xs:element name="vhc_key_status" msprop:Generator_ColumnVarNameInTable="columnvhc_key_status" msprop:Generator_ColumnPropNameInRow="vhc_key_status" msprop:Generator_ColumnPropNameInTable="vhc_key_statusColumn" msprop:Generator_UserColumnName="vhc_key_status" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:login_log" />
+      <xs:field xpath="mstns:login_ID" />
+    </xs:unique>
+    <xs:unique name="users_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:users" />
+      <xs:field xpath="mstns:usr_ID" />
+    </xs:unique>
+    <xs:unique name="vehicle_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vehicle" />
+      <xs:field xpath="mstns:vhc_ID" />
+    </xs:unique>
+    <xs:unique name="vehicle_rt_history_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vehicle_rt_history" />
+      <xs:field xpath="mstns:vrth_ID" />
+    </xs:unique>
+    <xs:unique name="booking_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:booking" />
+      <xs:field xpath="mstns:bk_ID" />
+    </xs:unique>
+    <xs:unique name="lorry_rt_history_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lorry_rt_history" />
+      <xs:field xpath="mstns:vrth_ID" />
+    </xs:unique>
+    <xs:unique name="lorry_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:lorry" />
+      <xs:field xpath="mstns:vhc_ID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="booking_vehicle" msdata:parent="booking" msdata:child="vehicle" msdata:parentkey="bk_vhcID" msdata:childkey="vhc_ID" msprop:Generator_UserChildTable="vehicle" msprop:Generator_ChildPropName="GetvehicleRows" msprop:Generator_UserRelationName="booking_vehicle" msprop:Generator_ParentPropName="bookingRow" msprop:Generator_RelationVarName="relationbooking_vehicle" msprop:Generator_UserParentTable="booking" />
+      <msdata:Relationship name="booking_users" msdata:parent="booking" msdata:child="users" msdata:parentkey="bk_approveby" msdata:childkey="usr_ID" msprop:Generator_UserChildTable="users" msprop:Generator_ChildPropName="GetusersRows" msprop:Generator_UserRelationName="booking_users" msprop:Generator_ParentPropName="bookingRow" msprop:Generator_RelationVarName="relationbooking_users" msprop:Generator_UserParentTable="booking" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

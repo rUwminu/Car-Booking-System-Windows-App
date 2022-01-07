@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8A8CE317-B0ED-4E33-9806-C741F9106E18}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CBS.My.MyApplication</StartupObject>
+    <RootNamespace>CBS</RootNamespace>
+    <AssemblyName>CBS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CBS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CBS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\carbook.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1449.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1449.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF5, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Fabric.Plugin, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\card_display.Designer.vb">
+      <DependentUpon>card_display.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\card_display.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\card_edit.Designer.vb">
+      <DependentUpon>card_edit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\card_edit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\card_manage.Designer.vb">
+      <DependentUpon>card_manage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\card_manage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\card_manage_return.Designer.vb">
+      <DependentUpon>card_manage_return.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\card_manage_return.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\card_new.Designer.vb">
+      <DependentUpon>card_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\card_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\booking_summary.Designer.vb">
+      <DependentUpon>booking_summary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\booking_summary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\bookingprint.Designer.vb">
+      <DependentUpon>bookingprint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\bookingprint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\booking_display.Designer.vb">
+      <DependentUpon>booking_display.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\booking_display.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\booking_new.Designer.vb">
+      <DependentUpon>booking_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\booking_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CBSDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CBSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CBSDataSet.vb">
+      <DependentUpon>CBSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DisplayMenu.Designer.vb">
+      <DependentUpon>DisplayMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DisplayMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\key_borrow_list.Designer.vb">
+      <DependentUpon>key_borrow_list.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\key_borrow_list.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\key_status_view.Designer.vb">
+      <DependentUpon>key_status_view.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\key_status_view.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\main_chgpass.Designer.vb">
+      <DependentUpon>main_chgpass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\main_chgpass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\security_checkIN.Designer.vb">
+      <DependentUpon>security_checkIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\security_checkIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\security_checkOUT.Designer.vb">
+      <DependentUpon>security_checkOUT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\security_checkOUT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\security_main.Designer.vb">
+      <DependentUpon>security_main.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\security_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Show_Expiry.Designer.vb">
+      <DependentUpon>Show_Expiry.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Show_Expiry.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\user_chgpw.Designer.vb">
+      <DependentUpon>user_chgpw.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\user_chgpw.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\user_display.Designer.vb">
+      <DependentUpon>user_display.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\user_display.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMDI.Designer.vb">
+      <DependentUpon>MainMDI.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle_Inspect.Designer.vb">
+      <DependentUpon>Vehicle_Inspect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vehicle_Inspect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle_Inspect_Renew.Designer.vb">
+      <DependentUpon>Vehicle_Inspect_Renew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vehicle_Inspect_Renew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle_Insurance.Designer.vb">
+      <DependentUpon>Vehicle_Insurance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vehicle_Insurance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle_Insurance_Renew.Designer.vb">
+      <DependentUpon>Vehicle_Insurance_Renew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vehicle_Insurance_Renew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\user_new.Designer.vb">
+      <DependentUpon>user_new.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\user_new.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\user_newchk.Designer.vb">
+      <DependentUpon>user_newchk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\user_newchk.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_add.Designer.vb">
+      <DependentUpon>vehicle_add.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_add.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_battery.Designer.vb">
+      <DependentUpon>vehicle_battery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_battery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_bty_history.Designer.vb">
+      <DependentUpon>vehicle_bty_history.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_bty_history.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_display.Designer.vb">
+      <DependentUpon>vehicle_display.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_display.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_engineOil.Designer.vb">
+      <DependentUpon>vehicle_engineOil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_engineOil.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_engOil_History.Designer.vb">
+      <DependentUpon>vehicle_engOil_History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_engOil_History.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle_repair.Designer.vb">
+      <DependentUpon>Vehicle_repair.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vehicle_repair.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_RepairDone.Designer.vb">
+      <DependentUpon>vehicle_RepairDone.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_RepairDone.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_repair_History.Designer.vb">
+      <DependentUpon>vehicle_repair_History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_repair_History.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Vehicle_RoadTax.Designer.vb">
+      <DependentUpon>Vehicle_RoadTax.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Vehicle_RoadTax.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_RoadTax_Renew.Designer.vb">
+      <DependentUpon>vehicle_RoadTax_Renew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_RoadTax_Renew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_tyre.Designer.vb">
+      <DependentUpon>vehicle_tyre.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_tyre.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\vehicle_tyreHistory.Designer.vb">
+      <DependentUpon>vehicle_tyreHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\vehicle_tyreHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report-Security.Designer.vb">
+      <DependentUpon>Report-Security.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report-Security.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\card_display.resx">
+      <DependentUpon>card_display.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\card_edit.resx">
+      <DependentUpon>card_edit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\card_manage.resx">
+      <DependentUpon>card_manage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\card_manage_return.resx">
+      <DependentUpon>card_manage_return.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\card_new.resx">
+      <DependentUpon>card_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\bookingprint.resx">
+      <DependentUpon>bookingprint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\booking_display.resx">
+      <DependentUpon>booking_display.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\booking_new.resx">
+      <DependentUpon>booking_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\booking_summary.resx">
+      <DependentUpon>booking_summary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DisplayMenu.resx">
+      <DependentUpon>DisplayMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\key_borrow_list.resx">
+      <DependentUpon>key_borrow_list.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\key_status_view.resx">
+      <DependentUpon>key_status_view.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\main_chgpass.resx">
+      <DependentUpon>main_chgpass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report-Security.resx">
+      <DependentUpon>Report-Security.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Show_Expiry.resx">
+      <DependentUpon>Show_Expiry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle_Inspect.resx">
+      <DependentUpon>Vehicle_Inspect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle_Inspect_Renew.resx">
+      <DependentUpon>Vehicle_Inspect_Renew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle_Insurance.resx">
+      <DependentUpon>Vehicle_Insurance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle_Insurance_Renew.resx">
+      <DependentUpon>Vehicle_Insurance_Renew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Report2.rdlc" />
+    <EmbeddedResource Include="Forms\security_checkIN.resx">
+      <DependentUpon>security_checkIN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\security_checkOUT.resx">
+      <DependentUpon>security_checkOUT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\security_main.resx">
+      <DependentUpon>security_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\user_chgpw.resx">
+      <DependentUpon>user_chgpw.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\user_display.resx">
+      <DependentUpon>user_display.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMDI.resx">
+      <DependentUpon>MainMDI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\user_new.resx">
+      <DependentUpon>user_new.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\user_newchk.resx">
+      <DependentUpon>user_newchk.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_add.resx">
+      <DependentUpon>vehicle_add.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_battery.resx">
+      <DependentUpon>vehicle_battery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_bty_history.resx">
+      <DependentUpon>vehicle_bty_history.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_display.resx">
+      <DependentUpon>vehicle_display.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_engineOil.resx">
+      <DependentUpon>vehicle_engineOil.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_engOil_History.resx">
+      <DependentUpon>vehicle_engOil_History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle_repair.resx">
+      <DependentUpon>Vehicle_repair.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_RepairDone.resx">
+      <DependentUpon>vehicle_RepairDone.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_repair_History.resx">
+      <DependentUpon>vehicle_repair_History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Vehicle_RoadTax.resx">
+      <DependentUpon>Vehicle_RoadTax.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_RoadTax_Renew.resx">
+      <DependentUpon>vehicle_RoadTax_Renew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_tyre.resx">
+      <DependentUpon>vehicle_tyre.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\vehicle_tyreHistory.resx">
+      <DependentUpon>vehicle_tyreHistory.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CBSDataSet.xsc">
+      <DependentUpon>CBSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CBSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CBSDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CBSDataSet.xss">
+      <DependentUpon>CBSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\CBS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\carbook.ico" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\background3.png" />
+    <None Include="Resources\background1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
